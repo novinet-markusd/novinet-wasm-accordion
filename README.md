@@ -21,7 +21,7 @@ add this script tag to your html:
 ```javascript
 <script type="module">
 import init, {add_event_listeners_accordion} 
-from 'url/to/folder/novinet-wasm-accordion/novinet_wasm_accordion.js';
+from 'url/to/folder/novinet_wasm_accordion.js';
 
 async function run() {
     await init();
