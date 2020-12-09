@@ -1,9 +1,9 @@
-use wasm_bindgen::prelude::*;
 use std::cell::RefCell;
 use std::rc::Rc;
+use wasm_bindgen::prelude::*;
 
-use crate::dom;
 use crate::console;
+use crate::dom;
 
 pub enum AnimationDirection {
     Open,
@@ -46,14 +46,13 @@ impl Animation {
         match self.dir {
             AnimationDirection::Open => {
                 self.current_height += gap;
-                self.current_height < self.end_value - 1.0 
-            },
+                self.current_height < self.end_value - 1.0
+            }
             AnimationDirection::Close => {
                 self.current_height -= gap;
                 self.current_height > 1.0
-            },
+            }
         }
-
     }
 
     pub fn get_max_height(wrapper: &web_sys::Element) -> f32 {
@@ -70,8 +69,6 @@ impl Animation {
             0.0
         }
     }
-
-   
 }
 
 pub fn animation(item: &web_sys::Element, dir: AnimationDirection) {
