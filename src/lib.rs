@@ -27,7 +27,7 @@ pub fn add_event_listeners_accordion() -> Option<bool> {
     })?;
 
     dom::select_all_then_foreach(
-        &format!("{} {}", SEL_ACCORDION, "header"),
+        &format!("{} {}", SEL_ACCORDION, ".nv-header"),
         |header: &web_sys::Element| {
             dom::add_mouse_event_listener(header, "click", |event: web_sys::MouseEvent| {
                 if let Some(item) = find_item(event) {
