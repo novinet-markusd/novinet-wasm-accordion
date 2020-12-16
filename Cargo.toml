@@ -1,6 +1,6 @@
 [package]
 name = "novinet-wasm-accordion"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["novinet-markusd <markus.dick@novinet.de>"]
 edition = "2018"
 
@@ -9,6 +9,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 wasm-bindgen = "0.2.68"
+console_error_panic_hook = "0.1.6"
 
 [dependencies.web-sys]
 version = "0.3.4"

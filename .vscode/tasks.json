@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"command": "wasm-pack build",
+			"group": "build",
+			"label": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"command": "cargo fmt",
+			"group": "build",
+			"label": "format",
+			"problemMatcher": []
+		}
+	]
+}
